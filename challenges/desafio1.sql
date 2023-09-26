@@ -8,7 +8,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
  CREATE TABLE SpotifyClone.user(
      user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
      nome VARCHAR(45) NOT NULL UNIQUE,
-     idade YEAR NOT NULL,
+     idade INT NOT NULL,
      data_assinatura DATE NOT NULL,
      planos_id INT NOT NULL,
      FOREIGN KEY (planos_id) REFERENCES planos(planos_id)
@@ -56,16 +56,16 @@ CREATE TABLE SpotifyClone.seguindo(
    ('4', 'pessoal', '6.99');
  INSERT INTO SpotifyClone.user (user_id, nome, idade, data_assinatura, planos_id)
  VALUES
-   ('1', 'Barbara Liskov', '82', '2019-01-01', '1'),
-   ('2', 'Robert Cecil Martin', '58', '2019-01-01', '1'),
-   ('3', 'Ada Lovelace', '37', '2019-01-01', '3'),
-   ('4', 'Martin Fowler', '46', '2019-01-01', '3'),
-   ('5', 'Sandi Metz', '58', '2018-04-29', '3'),
-   ('6', 'Paulo Freire', '19', '2018-04-14', '2'),
-   ('7', 'Bell Hooks', '26', '2018-01-14', '2'),
-   ('8', 'Christopher Alexander', '85', '2019-06-05', '4'),
-   ('9', 'Judith Butler', '45', '2020-05-13', '4'),
-   ('10', 'Jorge Amado', '58', '2017-02-17', '4');
+   ('1', 'Barbara Liskov', 82, '2019-01-01', '1'),
+   ('2', 'Robert Cecil Martin', 58, '2019-01-01', '1'),
+   ('3', 'Ada Lovelace', 37, '2019-01-01', '3'),
+   ('4', 'Martin Fowler', 46, '2019-01-01', '3'),
+   ('5', 'Sandi Metz', 58, '2018-04-29', '3'),
+   ('6', 'Paulo Freire', 19, '2018-04-14', '2'),
+   ('7', 'Bell Hooks', 26, '2018-01-14', '2'),
+   ('8', 'Christopher Alexander', 85, '2019-06-05', '4'),
+   ('9', 'Judith Butler', 45, '2020-05-13', '4'),
+   ('10', 'Jorge Amado', 58, '2017-02-17', '4');
    
    INSERT INTO SpotifyClone.artista (artista_id, nome)
     VALUES
